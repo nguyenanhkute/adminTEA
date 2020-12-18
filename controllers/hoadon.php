@@ -1,5 +1,5 @@
 <?php
-include_once('C:/xampp/htdocs/anatea/admin/model/hoadon.php');
+include_once('model/hoadon.php');
 $command=$_POST['command'];
 	if($command=="search"){
 		$search = isset($_POST['txt_search'])?$_POST['txt_search']:'';
@@ -9,10 +9,10 @@ $command=$_POST['command'];
 		echo $num;
 		if ($num>0){
 			echo "$num kết quả được tìm thấy với từ khóa <b>$search</b>";
-			header("Location:/anatea/admin/timkiemHoaDon.php?keyword=$search");
+			header("Location:/timkiemHoaDon.php?keyword=$search");
 		}else {
 			echo "Không tìm thấy bất kì sản phẩm nào với từ khóa <b>$search</b>";
-			header("Location:/anatea/admin/timkiemHoaDon.php?keyword=$search");
+			header("Location:/timkiemHoaDon.php?keyword=$search");
 		}
 
 		}
@@ -21,8 +21,8 @@ $command=$_POST['command'];
 		$tt = $_POST['tinhtrang'];
 		$mahd = $_POST['mahd'];
 		update_hoadon($mahd,$tt);
-		header("Location:/anatea/admin/hoadon.php");
+		header("Location:/hoadon.php");
 	}else{
-		header("Location:/anatea/admin/hoadon.php");
+		header("Location:/hoadon.php");
 	}
 ?>

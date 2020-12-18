@@ -1,6 +1,6 @@
 
 <?php
-include_once('C:/xampp/htdocs/anatea/admin/conn.php');
+include_once('conn.php');
 function lay_sampham() {
 	$conn = connect();
     $strSQL = "select * from sanpham, loaisanpham where sanpham.maloaisp= loaisanpham.maloaisp ORDER BY masp ASC";

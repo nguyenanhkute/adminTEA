@@ -1,6 +1,6 @@
 <?php
-include_once('C:/xampp/htdocs/anatea/admin/model/sanpham.php');
-include_once('C:/xampp/htdocs/anatea/admin/model/loaisanpham.php');
+include_once('model/sanpham.php');
+include_once('model/loaisanpham.php');
 	$command=$_POST['command'];
 echo $command;/**/
 	if($command=="update"){
@@ -21,7 +21,7 @@ echo $command;/**/
 			}*/
 			update_sanpham($masp,$tensp,$gia,$mota,$anh_name);
 	
-		header('location: /anatea/admin/sanpham.php');
+		header('location: /sanpham.php');
 	}
 
 	if($command=="insert"){
@@ -49,7 +49,7 @@ echo $command;/**/
 			
 		}*/
 		insert_sanpham($malsp,$tensp,$anh_name,$gia,$mota);
-		header('location: /anatea/admin/sanpham.php');
+		header('location: /sanpham.php');
 	}	
 
 	if($command=="search"){
@@ -60,14 +60,14 @@ echo $command;/**/
 		echo $num;
 		if ($num>0){
 			echo "$num kết quả được tìm thấy với từ khóa <b>$search</b>";
-			header("Location:/anatea/admin/timkiemSanPham.php?keyword=$search");
+			header("Location:/timkiemSanPham.php?keyword=$search");
 		}else {
 			echo "Không tìm thấy bất kì sản phẩm nào với từ khóa <b>$search</b>";
-			header("Location:/anatea/admin/timkiemSanPham.php?keyword=$search");
+			header("Location:/timkiemSanPham.php?keyword=$search");
 		}
 
 	}else{
-		header("Location:/anatea/admin/sanpham.php");
+		header("Location:/sanpham.php");
 	}
 }
 ?>

@@ -1,5 +1,5 @@
 <?php
-include_once('C:/xampp/htdocs/anatea/admin/model/chitiethoadon.php');
+include_once('model/chitiethoadon.php');
 $command=$_POST['command'];
 
 	if($command=="search"){
@@ -10,14 +10,14 @@ $command=$_POST['command'];
 			echo $num;
 			if ($num>0){
 				echo "$num kết quả được tìm thấy với từ khóa <b>$search</b>";
-				header("Location:/anatea/admin/timkiemChiTietHoaDon.php?keyword=$search");
+				header("Location:/timkiemChiTietHoaDon.php?keyword=$search");
 			}else {
 				echo "Không tìm thấy bất kì sản phẩm nào với từ khóa <b>$search</b>";
-				header("Location:/anatea/admin/timkiemChiTietHoaDon.php?keyword=$search");
+				header("Location:/timkiemChiTietHoaDon.php?keyword=$search");
 			}
 
 		}else{
-			header("Location:/anatea/admin/chitiethoadon.php");
+			header("Location:/chitiethoadon.php");
 		}
 	}
 	if($command=="search_hd"){
@@ -29,14 +29,14 @@ $command=$_POST['command'];
 			echo $num;
 			if ($num>0){
 				echo "$num kết quả được tìm thấy với từ khóa <b>$search</b>";
-				header("Location:/anatea/admin/timkiemChiTietHoaDon.php?keyword=$search");
+				header("Location:/timkiemChiTietHoaDon.php?keyword=$search");
 			}else {
 				echo "Không tìm thấy bất kì sản phẩm nào với từ khóa <b>$search</b>";
-				header("Location:/anatea/admin/timkiemChiTietHoaDon.php?keyword=$search");
+				header("Location:/timkiemChiTietHoaDon.php?keyword=$search");
 			}
 
 		}else{
-			header("Location:/anatea/admin/chitiethoadon.php");
+			header("Location:/chitiethoadon.php");
 		}
 	}
 ?>

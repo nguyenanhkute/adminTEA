@@ -1,5 +1,5 @@
 <?php
-include_once('C:/xampp/htdocs/anatea/admin/conn.php');
+include_once('conn.php');
 	function chart_sp($start,$end){
 		$conn = connect();
     	$strSQL = "select sp.tensp, count(ct.masp) as soluong from chitiethoadon ct , sanpham sp , hoadon hd where hd.MaHD=ct.mahd and ct.Masp=sp.MaSP and hd.NgayDatHang between '".$start."' and '".$end."' GROUP by sp.tensp";

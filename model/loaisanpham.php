@@ -1,5 +1,5 @@
 <?php 
-include_once('C:/xampp/htdocs/anatea/admin/conn.php');
+include_once('conn.php');
  	function lay_loaisampham() {
 		$conn = connect();
     	$strSQL = "select * from loaisanpham ";
